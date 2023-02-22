@@ -1,11 +1,12 @@
 var express = require('express');
 var app = express();
+const PORT = process.env.PORT || 4000;
 
 app.get('/', function (req, res) {
    res.send('Hello World');
 })
 
-var server = app.listen(443, function () {
+var server = app.listen(PORT, function () {
    var host = server.address().address
    var port = server.address().port
    
